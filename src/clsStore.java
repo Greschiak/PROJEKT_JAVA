@@ -100,6 +100,39 @@ public class clsStore extends clsFirm {
 
     }
 
+    public   void ArticleStateChange( ){
+
+
+        String sEAN = oInput.GetString("Podaj EAN artykułu do aktualizacji stanu: ",13);
+        clsArticle oArticleTemp;
+
+        try{
+
+            //List<clsArticle>  oList =  lstArticle.stream().filter(n -> n.getEAN().equals(sEAN) ).collect(Collectors.toList());
+
+            Iterator<clsArticle> oIterator = lstArticle.iterator();
+            while (oIterator.hasNext()) {
+
+                oArticleTemp = oIterator.next();
+                String tEAN_Temp =oArticleTemp.getEAN();
+                if (tEAN_Temp.equals( sEAN))
+                {
+
+                    oArticleTemp.setState( oArticleTemp.getState() +  oInput.GetDouble("Podaj ilość dostawy : "));
+                    Save_Artikles();
+                    return;
+
+                }
+            }
+
+
+        }
+        catch (Exception ex){
+            System.out.println("Błąd 004: " + ex.getMessage());
+        }
+
+    }
+
     public   void ArticleDelete( ){
 
 

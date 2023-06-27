@@ -75,11 +75,15 @@ public class Main {
                         oStore.Sale(false);
                         break;
                     case 13:
-                        oStore.Save_CSV();
+                        oStore.ArticleStateChange();
                         break;
                     case 14:
+                        oStore.Save_CSV();
+                        break;
+                    case 15:
                         oStore.Read_CSV();
                         break;
+
                     case 0:
                         System.out.println("Wyjdź z programu");
                         break;
@@ -111,8 +115,10 @@ public class Main {
         System.out.println("10. Lista klientów zadłuzonych");
         System.out.println("11. Sprzedaż hurtowa");
         System.out.println("12. Sprzedaż detaliczna");
-        System.out.println("13. csv-Export");
-        System.out.println("14. csv-Import");
+        System.out.println("13. Zmiana ilości");
+        System.out.println("14. csv-Export");
+        System.out.println("15. csv-Import");
+
         System.out.println("------------------------------");
         System.out.println(" 0. Wyjście z programu");
 
