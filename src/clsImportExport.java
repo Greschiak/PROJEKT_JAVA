@@ -92,7 +92,7 @@ public class clsImportExport {
             lst.clear();
             while ((oLine = obj.readLine()) != null) {
                 System.out.println(oLine);
-                String[] aTemp = oLine.split(";", 6);
+                String[] aTemp = oLine.split(";", 7);
                 if (aTemp.length > 5)
                 {
                     clsArticle oTemp = new clsArticle();
@@ -129,7 +129,7 @@ public class clsImportExport {
             lst.clear();
             while ((oLine = obj.readLine()) != null) {
                 System.out.println(oLine);
-                String[] aTemp = oLine.split(";", 11);
+                String[] aTemp = oLine.split(";", 12);
                 if (aTemp.length > 10)
                 {
                     clsCustomer oTemp = new clsCustomer();
